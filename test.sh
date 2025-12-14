@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if [ "$EUID" -ne 0 ]; then
     echo "This file needs root permissions."
     exit 1
