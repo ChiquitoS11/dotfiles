@@ -68,12 +68,25 @@ yay -S stow --noconfirm > /dev/null
 
 
 # CONFIGURAR STOW
-rm ~/.zshrc
+if [[ ! -e "$HOME/.zshrc" ]]; then # .zshrc
+	rm "$HOME/.zshrc"
+fi
 (
-	cd "$HOME/dotfiles"
+	cd "$HOME/dotfiles" 
 	stow zsh
 )
 
+if [[ ! -e "$HOME/.config/kitty/kitty.conf" ]]; then # kitty
+	rm "$HOME/.config/kitty/kitty.conf"
+fi
+(
+	cd "$HOME/dotfiles" 
+	stow kitty
+)
+
+rm ~/.config/kitty/kitty.conf
+(
+	cd "$HOME
 
 # Aplicaciones extra
 yay -S lsd --noconfirm > /dev/null
