@@ -13,7 +13,7 @@ echo "Sistema operativo actualizado con exito."
 
 
 # INSTALAR GIT
-sudo pacman -S --needed base-devel git
+sudo pacman -S --needed base-devel git --noconfirm
 echo "Instalacion de git completada con exito"
 
 
@@ -37,7 +37,7 @@ fi
 
 
 # INSTALAR ZSH 
-yay -S zsh
+yay -S zsh --noconfirm
 chsh -s /usr/bin/zsh
 
 
@@ -59,12 +59,12 @@ fi
 echo "Plugins instalados con exito"
 
 # INSTALAR STARSHIP (opcional)
-yay -S starship
+yay -S starship --noconfirm
 starship preset pastel-powerline -o ~/.config/starship.toml
 
 
 # INSTALAR STOW
-yay -S stow
+yay -S stow --noconfirm
 
 
 # CONFIGURAR STOW
@@ -74,6 +74,8 @@ rm ~/.zshrc
 	stow zsh
 )
 
+
 # Informar de la instalacion exitosa
 echo "---------------------------------"
 echo "Instalacion completada con exito!"
+echo "Por favor reinicie su terminal o ejecute 'zsh'"
