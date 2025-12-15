@@ -106,4 +106,7 @@ alias ohmyzshconfig="nvim ~/.oh-my-zsh/oh-my-zsh.sh"
 alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
 alias lsd="lsd -A"
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 eval "$(starship init zsh)"

@@ -31,6 +31,7 @@ sleep 8 # Pausar unos segundos por si el usuario quiere cancelar
 
 git config --global user.name "$NAME"
 git config --global user.email "$EMAIL"
+git config --global core.editor "nvim"
 
 
 # Creando el SSH

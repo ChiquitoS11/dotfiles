@@ -75,6 +75,11 @@ rm ~/.zshrc
 )
 
 
+# Aplicaciones extra
+yay -S lsd --noconfirm > /dev/null
+sudo yay -S neovim
+
+
 # Informar de la instalacion exitosa
 echo "---------------------------------"
 echo "Instalacion completada con exito!"
