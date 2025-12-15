@@ -68,7 +68,7 @@ yay -S stow --noconfirm > /dev/null
 
 
 # CONFIGURAR STOW
-if [[ ! -e "$HOME/.zshrc" ]]; then # .zshrc
+if [[ -e "$HOME/.zshrc" ]]; then # .zshrc
 	rm "$HOME/.zshrc"
 fi
 (
@@ -76,7 +76,7 @@ fi
 	stow zsh
 )
 
-if [[ ! -e "$HOME/.config/kitty/kitty.conf" ]]; then # kitty
+if [[ -e "$HOME/.config/kitty/kitty.conf" ]]; then # kitty
 	rm "$HOME/.config/kitty/kitty.conf"
 fi
 (
@@ -84,16 +84,14 @@ fi
 	stow kitty
 )
 
-rm ~/.config/kitty/kitty.conf
-(
-	cd "$HOME
 
 # Aplicaciones extra
 yay -S lsd --noconfirm > /dev/null
-sudo yay -S neovim
+sudo yay -S neovim --noconfirm > /dev/null
 
 
 # Informar de la instalacion exitosa
 echo "---------------------------------"
 echo "Instalacion completada con exito!"
-echo "Por favor reinicie su terminal o ejecute 'zsh' (Algunas configuraciones necesitan reinicio del sistema)"
+echo "Por favor reinicie su terminal o ejecute 'zsh'"
+echo "Tenga en cuento que algunas de estas configuraciones necesitan un reinicio, por favor reinicie el ordenador."
