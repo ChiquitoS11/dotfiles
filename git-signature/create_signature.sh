@@ -39,7 +39,7 @@ echo "Creando SSH..."
 mkdir -p "$HOME/.ssh"
 chmod 700 "$HOME/.ssh"
 
-if [ ! -f "$KEY_PATH" ]; then
+if [[ ! -f "$KEY_PATH" ]]; then
 	ssh-keygen -t ed25519 -C "$EMAIL" -f "$KEY_PATH" -N ""
 else
 	echo "Clave SSH existente..."
