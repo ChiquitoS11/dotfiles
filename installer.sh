@@ -8,12 +8,12 @@ mkdir -p "$HOME/.config"
 
 
 # ACTUALIZAR OS
-sudo pacman -Syu
+sudo pacman -Syu > /dev/null
 echo "Sistema operativo actualizado con exito."
 
 
 # INSTALAR GIT
-sudo pacman -S --needed base-devel git --noconfirm
+sudo pacman -S --needed base-devel git --noconfirm > /dev/null
 echo "Instalacion de git completada con exito"
 
 
@@ -37,7 +37,7 @@ fi
 
 
 # INSTALAR ZSH 
-yay -S zsh --noconfirm
+yay -S zsh --noconfirm > /dev/null
 chsh -s /usr/bin/zsh
 
 
@@ -59,12 +59,12 @@ fi
 echo "Plugins instalados con exito"
 
 # INSTALAR STARSHIP (opcional)
-yay -S starship --noconfirm
+yay -S starship --noconfirm > /dev/null
 starship preset pastel-powerline -o ~/.config/starship.toml
 
 
 # INSTALAR STOW
-yay -S stow --noconfirm
+yay -S stow --noconfirm > /dev/null
 
 
 # CONFIGURAR STOW
@@ -78,4 +78,4 @@ rm ~/.zshrc
 # Informar de la instalacion exitosa
 echo "---------------------------------"
 echo "Instalacion completada con exito!"
-echo "Por favor reinicie su terminal o ejecute 'zsh'"
+echo "Por favor reinicie su terminal o ejecute 'zsh' (Algunas configuraciones necesitan reinicio del sistema)"
