@@ -46,4 +46,14 @@ for FONT in "${FONTS[@]}"; do
 done
 
 
+# ---- Miracode ----
+MIRACODE_DIR="$FONT_ROOT/Miracode"
+MIRACODE_URL="https://github.com/IdreesInc/Miracode/releases/download/v1.0/Miracode.ttf"
+
+if [ ! -f "$MIRACODE_DIR/Miracode.ttf" ]; then
+    mkdir -p "$MIRACODE_DIR"
+    curl -fL "$MIRACODE_URL" -o "$MIRACODE_DIR/Miracode.ttf"
+fi
+
+
 fc-cache -f
