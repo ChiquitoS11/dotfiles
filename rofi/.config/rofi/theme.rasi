@@ -1,0 +1,97 @@
+/* =========================
+   Soulsborne Rofi Theme
+   Standalone (no HyDE)
+   ========================= */
+
+* {
+    /* Colors */
+    @main-bg:    #141618E6;
+    @main-fg:    #f5f7faFF;
+    @main-br:    #b9c4cfFF;
+    @main-ex:    #cdd6dfFF;
+    @select-bg:  #cdd6dfFF;
+    @select-fg:  #141618FF;
+
+    /* General */
+    font: "JetBrainsMono Nerd Font 12";
+    text-color: @main-fg;
+    background-color: transparent;
+}
+
+/* =========================
+   Window
+   ========================= */
+window {
+    location: center;
+    anchor: center;
+    width: 480px;
+    padding: 20px;
+    border: 0px;
+    border-radius: 14px;
+    background-color: @main-bg;
+}
+
+/* =========================
+   Input bar
+   ========================= */
+inputbar {
+    padding: 10px;
+    spacing: 10px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @main-br;
+}
+
+entry {
+    text-color: @main-fg;
+    background-color: transparent;
+}
+
+/* =========================
+   List view
+   ========================= */
+listview {
+    lines: 8;
+    columns: 1;
+    spacing: 6px;
+    fixed-height: false;
+}
+
+/* =========================
+   Elements
+   ========================= */
+element {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: @select-bg;
+}
+
+element selected.normal element-text {
+    text-color: @select-fg;
+}
+
+/* =========================
+   Text
+   ========================= */
+element-text {
+    text-color: @main-fg;
+}
+
+/* =========================
+   Scrollbar (disabled)
+   ========================= */
+scrollbar {
+    handle-width: 0px;
+    background-color: transparent;
+}
+

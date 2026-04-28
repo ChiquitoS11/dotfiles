@@ -1,0 +1,69 @@
+/* Soulsborne Rofi Theme - Standalone */
+
+* {
+    main-bg:    #141618E6;
+    main-fg:    #f5f7faFF;
+    main-br:    #b9c4cfFF;
+    select-bg:  #cdd6dfFF;
+    select-fg:  #141618FF;
+
+    font: "JetBrainsMono Nerd Font 12";
+    text-color: @main-fg;
+    background-color: transparent;
+}
+
+/* Window */
+window {
+    location: center;
+    width: 480px;
+    padding: 20px;
+    border: 0;
+    border-radius: 14px;
+    background-color: @main-bg;
+}
+
+/* Input */
+inputbar {
+    padding: 10px;
+    spacing: 10px;
+}
+
+prompt {
+    text-color: @main-br;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @main-fg;
+}
+
+/* List */
+listview {
+    lines: 8;
+    spacing: 6px;
+}
+
+/* Elements */
+element {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+element selected {
+    background-color: @select-bg;
+}
+
+element selected element-text {
+    text-color: @select-fg;
+}
+
+element-text {
+    text-color: @main-fg;
+}
+
+/* Scrollbar */
+scrollbar {
+    handle-width: 0px;
+    background-color: transparent;
+}
+

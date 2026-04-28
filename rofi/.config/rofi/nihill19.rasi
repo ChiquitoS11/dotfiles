@@ -1,0 +1,115 @@
+* {
+    font:             "JetBrainsMono Nerd Font 11";
+    text-color:       #c5d1a5;
+    background-color: transparent;
+}
+
+configuration {
+    show-icons: true;
+}
+
+window {
+    width:            900px;
+    height:           450px;
+    border-radius:    16px;
+    background-color: #0d1210ee;
+    border:           2px solid;
+    border-color:     #3a5a40;
+    padding:          0;
+    children:         [ mainbox ];
+}
+
+mainbox {
+    orientation: horizontal;
+    spacing:     0;
+    children:    [ preview, rightbox ];
+}
+
+/* Panel izquierdo con imagen */
+preview {
+    expand:           false;
+    width:            400px;
+    background-image: url("~/.config/rofi/img/bg.jpg", height);
+    border-radius:    14px 0 0 14px;
+}
+
+/* Panel derecho */
+rightbox {
+    orientation:      vertical;
+    expand:           true;
+    padding:          20px;
+    spacing:          15px;
+    background-color: #0d1210;
+    border-radius:    0 14px 14px 0;
+    children:         [ header, inputbar, listview ];
+}
+
+/* Breadcrumb / navegación superior */
+header {
+    expand:           false;
+    padding:          10px 18px;
+    background-color: #3b3726;
+    border-radius:    25px;
+    children:         [ textbox-path ];
+}
+
+textbox-path {
+    font: "Noto Sans Mono CJK JP 12";
+    str:        "ようこそ cosas de la vida";
+    text-color: #c5d1a5;
+    margin-bottom: 10px;
+}
+
+
+
+/* Barra de búsqueda */
+inputbar {
+    expand:           false;
+    padding:          10px 14px;
+    background-color: #1a2420;
+    border-radius:    10px;
+    spacing:          10px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: #7a9f6a;
+}
+
+entry {
+    placeholder:       "Buscar...";
+    placeholder-color: #5a6a55;
+    text-color:        #c5d1a5;
+}
+
+/* Lista de elementos */
+listview {
+    lines:        6;
+    scrollbar:    false;
+    fixed-height: true;
+    spacing:      8px;
+}
+
+element {
+    padding:       8px 12px;
+    border-radius: 8px;
+    spacing:       12px;
+    children:      [ element-icon, element-text ];
+}
+
+element-icon {
+    size: 24px;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color:     #c5d1a5;
+}
+
+element selected {
+    background-color: #243828;
+}
+
+element selected element-text {
+    text-color: #d0e6c1;
+}
