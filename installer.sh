@@ -5,19 +5,12 @@ set -e
 
 # pequenyos detalles
 mkdir -p "$HOME/.config"
-
+sudo pacman -S unzip --noconfirm
 
 # ACTUALIZAR OS
 echo "Actualizando OS..."
 sudo pacman -Syu > /dev/null
 echo "Sistema operativo actualizado con exito."
-echo ""
-
-
-# INSTALAR FUENTES
-echo "Instalado fuentes..."
-bash "./fonts/installer-fonts.sh"
-echo "Las fuentes se han instalado con exito"
 echo ""
 
 
@@ -37,17 +30,23 @@ fi
 echo ""
 
 
-# INSTALAR YAY
-echo "Instalando yay"
+echo "Instalando yay..."
 if ! command -v yay > /dev/null; then
-	mkdir -p "./yay"
-	git clone https://aur.archlinux.org/yay.git "./yay/"
-	(
-		cd "./yay/" || exit 1
-		makepkg -si
-	)
+        rm -rf "./yay"
+        git clone https://aur.archlinux.org/yay.git "./yay"
+        (
+                cd "./yay" || exit 1
+                makepkg -si
+        )
 fi
 echo "Yay se ha instalado con exito"
+echo ""
+
+
+# INSTALAR FUENTES
+echo "Instalado fuentes..."
+bash "./fonts/installer-fonts.sh"
+echo "Las fuentes se han instalado con exito"
 echo ""
 
 

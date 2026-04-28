@@ -1,0 +1,10 @@
+# font_family Agave
+mouse_hide_wait 5.0
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="Agave Nerd Font"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS

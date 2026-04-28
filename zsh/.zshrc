@@ -105,8 +105,18 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzshconfig="nvim ~/.oh-my-zsh/oh-my-zsh.sh"
 alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
 alias lsd="lsd -A"
+alias android-studio="/opt/android-studio/bin/studio"
 
 export EDITOR=nvim
 export VISUAL=nvim
 
+# Cosas necesarias para que react native detecte el emulador de android
+export ANDROID_HOME=/home/chiquitos11/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 eval "$(starship init zsh)"
+
+export PATH=$PATH:/home/chiquitos11/.spicetify
