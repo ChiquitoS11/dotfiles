@@ -120,3 +120,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 eval "$(starship init zsh)"
 
 export PATH=$PATH:/home/chiquitos11/.spicetify
+
+export PATH=$PATH:/home/nihill19/.spicetify

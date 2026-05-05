@@ -81,7 +81,7 @@ echo "Plugins OH-MY-ZSH instalados con exito"
 echo ""
 
 
-# INSTALAR STARSHIP (opcional)
+# INSTALAR STARSHIP
 echo "Instalando starship..."
 yay -S starship --noconfirm > /dev/null
 starship preset pastel-powerline -o ~/.config/starship.toml
@@ -116,6 +116,11 @@ fi
 echo "Stow configurado con exito"
 echo ""
 
+# INSTALAR SPOTIFY + SPICETIFY
+echo "Instalando Spotify + Spicetify..."
+bash "./spotify/spotify-installer.sh"
+echo "Spotify + Spicetify se ha instalado con exito"
+echo ""
 
 # Aplicaciones extra
 echo "Instalando paquetes de ayuda... (lsd, neovim)"
