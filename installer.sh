@@ -118,7 +118,7 @@ echo ""
 
 # INSTALAR SPOTIFY + SPICETIFY
 echo "Instalando Spotify + Spicetify..."
-bash "./spotify/spotify-installer.sh"
+#bash "./spotify/spotify-installer.sh"
 echo "Spotify + Spicetify se ha instalado con exito"
 echo ""
 
